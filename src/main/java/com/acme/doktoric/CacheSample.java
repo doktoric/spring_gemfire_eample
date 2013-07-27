@@ -1,6 +1,7 @@
 package com.acme.doktoric;
 
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Component;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,26 +10,28 @@ import org.springframework.cache.annotation.Cacheable;
  * Time: 20:45
  * To change this template use File | Settings | File Templates.
  */
+@Component
 public class CacheSample {
 
-    @Cacheable(value = "names", key = "#id")
+    @Cacheable(value = "sample_cache",key = "#id")
     public String getID(String id) {
+        System.out.println("In Function...");
         if (id.equals("1")) {
-            return "Attila";
+            return("Attila");
         } else if (id.equals("2")) {
-            return "Bela";
+            return ("Bela");
         } else if (id.equals("3")) {
-            return "Cecil";
+            return ("Cecil");
         } else if (id.equals("4")) {
-            return "Feri";
+            return ("Feri");
         } else if (id.equals("5")) {
-            return "Jozsi";
+            return ("Jozsi");
         } else if (id.equals("6")) {
-            return "Kalman";
+            return ("Kalman");
         } else if (id.equals("7")) {
-            return "Mari";
+            return ("Mari");
         }
-        return "Zoli";
+        return ("Zoli");
     }
 
 }

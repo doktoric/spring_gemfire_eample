@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingCacheListener extends CacheListenerAdapter {
 
+
     @Override
     public void afterCreate(EntryEvent event) {
         final String regionName = event.getRegion().getName();

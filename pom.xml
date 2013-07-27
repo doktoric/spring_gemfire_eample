@@ -34,6 +34,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.2.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.data.gemfire</groupId>
             <artifactId>spring-gemfire</artifactId>
             <version>1.0.1.RELEASE</version>

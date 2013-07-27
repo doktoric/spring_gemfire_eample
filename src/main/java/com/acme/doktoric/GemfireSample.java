@@ -1,7 +1,10 @@
 package com.acme.doktoric;
 
+import org.springframework.beans.factory.annotation.Autowire;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,19 +13,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Time: 20:44
  * To change this template use File | Settings | File Templates.
  */
+@Component
 public class GemfireSample {
 
+    @Autowired
+    public CacheSample cacheSample;
 
-    public static void main(String arg[]) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("/app-context.xml");
-        GemfireSample gemfireSample = new GemfireSample();
-        gemfireSample.getNameForId();
+    public GemfireSample(){
+
     }
 
     public void getNameForId() {
-        CacheSample cacheSample = new CacheSample();
         for (int i = 0; i < 20; i++) {
-            cacheSample.getID("1");
+            System.out.println(i+": "+cacheSample.getID("1").toString());
         }
     }
 
