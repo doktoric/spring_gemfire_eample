@@ -1,5 +1,6 @@
-package com.acme.doktoric;
+package com.acme.doktoric.controllers;
 
+import com.acme.doktoric.GemfireSample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

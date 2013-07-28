@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
 		http://www.springframework.org/schema/gemfire http://www.springframework.org/schema/gemfire/spring-gemfire.xsd">
 
-    <gfe:cache properties-ref="props" />
+    <gfe:cache properties-ref="props" id="mi" />
     <util:properties id="props" location="cache.properties"/>
 
     <gfe:transaction-manager />

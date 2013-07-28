@@ -12,19 +12,19 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
 
-    <beans:import resource="cache-config.xml"/>
-    <context:component-scan base-package="com.acme.doktoric.**" />
-    <cache:annotation-driven/>
+    <!--<beans:import resource="cache-config.xml"/>-->
+   <!-- <context:component-scan base-package="com.acme.doktoric.controllers" /> -->
+    <!--<cache:annotation-driven/>-->
 
     <beans:import resource="viewresolver.xml" />
 
-    <beans:bean id="cacheManager" class="org.springframework.data.gemfire.support.GemfireCacheManager">
+   <!-- <beans:bean id="cacheManager" class="org.springframework.data.gemfire.support.GemfireCacheManager">
         <beans:property name="regions">
             <beans:set>
                 <beans:ref bean="sample_cache"/>
             </beans:set>
         </beans:property>
-    </beans:bean>
+    </beans:bean>-->
 
 
 </beans:beans>
